@@ -1,0 +1,43 @@
+{
+  "name": "miming",
+  "version": "0.0.0",
+  "description": "Processing and formatting for various mime types.",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha --watch",
+    "jshint": "jshint ./lib",
+    "pretest": "npm run jshint",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codemix/miming"
+  },
+  "keywords": [
+    "mime-type",
+    "mime",
+    "content-negotiation"
+  ],
+  "author": "Charles Pick <charles@codemix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codemix/miming/issues"
+  },
+  "homepage": "https://github.com/codemix/miming",
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "should": "~4.0.4",
+    "istanbul": "~0.2.11",
+    "mocha": "~1.20.1",
+    "jshint": "~2.5.1"
+  },
+  "dependencies": {
+    "classing": "0.0.9",
+    "formidable": "~1.0.15",
+    "bluebird": "~2.1.3"
+  }
+}
