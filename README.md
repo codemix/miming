@@ -1,5 +1,7 @@
 # Miming
 
+[![Build Status](https://travis-ci.org/codemix/miming.svg?branch=master)](https://travis-ci.org/codemix/miming)
+
 A very small library for parsing and formatting various different mime types in node.js.
 
 > Note: Miming does not deal with content negotiation, you should use another library such as [negotiator](https://www.npmjs.org/package/negotiator) for that.
