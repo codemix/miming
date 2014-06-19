@@ -1,5 +1,4 @@
 var http = require('http'),
-    Negotiator = require('negotiator'),
     Miming = require('../lib'),
     collection = new Miming.Collection();
 
