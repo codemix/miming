@@ -1,16 +1,10 @@
 var Classing = require('classing'),
-    EventEmitter = require('events').EventEmitter;
+    Request = require('http').IncomingMessage,
+    ReadableStream = require('stream').PassThrough;
 
 module.exports = Classing.create('MockRequest', {
-  headers: {
-    default: function () {
-      return {
-        'Content-Type': 'application/json'
-      };
-    }
-  },
   initialize: function () {
-    EventEmitter.call(this);
+    Request.call(this, new ReadableStream());
   },
   mock: function (data) {
     var firstChunk = data.slice(0, Math.floor(data.length / 2));
@@ -28,4 +22,4 @@ module.exports = Classing.create('MockRequest', {
   }
 });
 
-module.exports.inherits(EventEmitter);
+module.exports.inherits(Request);
