@@ -10,14 +10,12 @@ describe('Miming', function () {
 
   describe('Collection', function () {
     beforeEach(function () {
-      instance = new LIB.Collection({
-        items: [
+      instance = new LIB.Collection([
           new LIB.Types.JSON(),
           new LIB.Types.FormURLEncoded(),
           new LIB.Types.HTML(),
           new LIB.Types.Text()
-        ]
-      });
+        ]);
     });
     describe('add()', function () {
       it('should add a type based on its name', function () {
